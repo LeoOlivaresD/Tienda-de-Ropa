@@ -22,4 +22,9 @@ public class CatalogoRopaServiceImpl implements CatalogoRopaService {
         return catalogoRopaRepository.listarPorPrecioAscendente();
     }
 
+    @Override
+    public void agregarPrenda(CatalogoRopa catalogoRopa) {
+        catalogoRopaRepository.agregarACatalogo(catalogoRopa);
+    }
+
 }

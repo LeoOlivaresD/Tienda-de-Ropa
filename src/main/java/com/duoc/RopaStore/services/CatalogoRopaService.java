@@ -11,4 +11,6 @@ public interface CatalogoRopaService {
     List<CatalogoRopa> getAllCatalogoRopa();
 
     List<CatalogoRopa> listarPorPrecioMenorAMayor();
+
+    void agregarPrenda(CatalogoRopa catalogoRopa);
 }
