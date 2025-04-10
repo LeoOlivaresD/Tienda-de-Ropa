@@ -6,14 +6,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.duoc.RopaStore.models.CatalogoRopa;
 import com.duoc.RopaStore.services.CatalogoRopaService;
 
+import lombok.RequiredArgsConstructor;
+
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/catalogo")
+@RequiredArgsConstructor
 public class RestControllerCatalogoRopa {
 
     private final CatalogoRopaService catalogoRopaService;
@@ -35,4 +40,11 @@ public class RestControllerCatalogoRopa {
         }
         return ResponseEntity.ok(ropa);
     }
+
+    @PostMapping
+    public ResponseEntity<Void> agregarPrenda(@RequestBody CatalogoRopa prenda) {
+        catalogoRopaService.agregarPrenda(prenda);
+        return ResponseEntity.status(201).build();
+    }
+
 }
