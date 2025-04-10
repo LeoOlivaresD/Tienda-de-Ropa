@@ -9,9 +9,17 @@ public class CatalogoRopaRepository {
     // Lista donde almacenaremos nuestro catalogo
     private final List<CatalogoRopa> listaRopa = new ArrayList<>();
 
-    // Metodo para listar ropa de manera convensional
+    // Metodo para listar ropa de manera convencional
     public List<CatalogoRopa> findAll() {
         return listaRopa;
+    }
+
+    // Metodo para listar ropa ordenada por precio de menor a mayor
+    public List<CatalogoRopa> listarPorPrecioAscendente() {
+        // Creamos una copia para no modificar la lista original
+        List<CatalogoRopa> listaOrdenada = new ArrayList<>(listaRopa);
+        listaOrdenada.sort((ropa1, ropa2) -> Integer.compare(ropa1.getPrecioPrenda(), ropa2.getPrecioPrenda()));
+        return listaOrdenada;
     }
 
     // Metodo para agregar ropa al catalogo
