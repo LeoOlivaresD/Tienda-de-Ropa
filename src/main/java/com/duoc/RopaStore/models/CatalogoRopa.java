@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor // Indicamos que la clase tendra unc ontructor con todos los parametros
 @NoArgsConstructor // Indicamos que la clase tendra un constructor sin parametros
 public class CatalogoRopa {
-    private Long idRopa;
+    private int idRopa;
     private String categoriaPrenda;
     private String marcaPrenda;
     private String tipoPrenda;
