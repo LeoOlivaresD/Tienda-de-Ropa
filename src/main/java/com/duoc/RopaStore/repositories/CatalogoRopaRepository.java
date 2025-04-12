@@ -35,4 +35,25 @@ public class CatalogoRopaRepository {
 
     }
 
+
+    // Buscar prenda por ID
+    public CatalogoRopa findById(Long id) {
+        for (CatalogoRopa prenda : listaRopa) {
+            if (prenda.getIdRopa() == id) {
+                return prenda;
+            }
+        }
+        return null;
+    }
+
+    // Eliminar prenda por ID
+    public boolean deleteById(Long id) {
+        CatalogoRopa prenda = findById(id);
+        if (prenda != null) {
+            listaRopa.remove(prenda);
+            return true;
+        }
+        return false;
+    }
+
 }

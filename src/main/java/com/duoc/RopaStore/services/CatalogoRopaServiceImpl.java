@@ -27,4 +27,15 @@ public class CatalogoRopaServiceImpl implements CatalogoRopaService {
         catalogoRopaRepository.agregarACatalogo(catalogoRopa);
     }
 
+    @Override
+    public CatalogoRopa findById(Long id) {
+        return catalogoRopaRepository.findById(id);
+    }
+
+    @Override
+    public boolean deleteById(Long id) {
+        return catalogoRopaRepository.deleteById(id);
+    }
+
+
 }

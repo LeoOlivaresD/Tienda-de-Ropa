@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.duoc.RopaStore.models.CatalogoRopa;
 
+
 @Service
 public interface CatalogoRopaService {
     List<CatalogoRopa> getAllCatalogoRopa();
@@ -13,4 +14,9 @@ public interface CatalogoRopaService {
     List<CatalogoRopa> listarPorPrecioMenorAMayor();
 
     void agregarPrenda(CatalogoRopa catalogoRopa);
+    
+    CatalogoRopa findById(Long id); // Nuevo método
+
+    boolean deleteById(Long id);    // Nuevo método
+
 }
