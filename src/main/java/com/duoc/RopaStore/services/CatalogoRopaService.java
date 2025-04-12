@@ -15,8 +15,8 @@ public interface CatalogoRopaService {
 
     void agregarPrenda(CatalogoRopa catalogoRopa);
     
-    CatalogoRopa findById(Long id); // Nuevo método
+    CatalogoRopa findById(Long id); 
 
-    boolean deleteById(Long id);    // Nuevo método
+    boolean deleteById(Long id);   
 
 }

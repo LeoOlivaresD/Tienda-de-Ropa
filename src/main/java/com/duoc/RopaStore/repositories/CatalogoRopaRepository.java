@@ -32,11 +32,17 @@ public class CatalogoRopaRepository {
         listaRopa.add(new CatalogoRopa(2, "Deporte", "Nike", "Calcetas", 10000));
         listaRopa.add(new CatalogoRopa(3, "Verano", "Americanino", "Bermudas", 15000));
         listaRopa.add(new CatalogoRopa(4, "Mujer", "Zara", "Blusa", 20000));
-
+        listaRopa.add(new CatalogoRopa(5, "Formal", "Hugo Boss", "Pantalón", 45000));
+        listaRopa.add(new CatalogoRopa(6, "Casual", "Levi's", "Jeans", 40000));
+        listaRopa.add(new CatalogoRopa(7, "Invierno", "Columbia", "Parka", 70000));
+        listaRopa.add(new CatalogoRopa(8, "Deporte", "Puma", "Polera deportiva", 18000));
+        listaRopa.add(new CatalogoRopa(9, "Verano", "H&M", "Short", 12000));
+        listaRopa.add(new CatalogoRopa(10, "Mujer", "Forever 21", "Falda", 22000));
     }
 
 
-    // Buscar prenda por ID
+
+    // Metodo para Buscar prenda por ID
     public CatalogoRopa findById(Long id) {
         for (CatalogoRopa prenda : listaRopa) {
             if (prenda.getIdRopa() == id) {
@@ -46,7 +52,7 @@ public class CatalogoRopaRepository {
         return null;
     }
 
-    // Eliminar prenda por ID
+    // Metodo para Eliminar prenda por ID
     public boolean deleteById(Long id) {
         CatalogoRopa prenda = findById(id);
         if (prenda != null) {
